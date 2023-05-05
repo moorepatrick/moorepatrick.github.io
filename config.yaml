@@ -2,6 +2,10 @@ baseURL : "http://moorepatrick.com/"
 
 theme : "DoIt"
 
+module:
+  imports:
+  - path: github.com/HEIGE-PCloud/DoIt
+
 title : "Patrick Moore"
 
 # Language Settings
