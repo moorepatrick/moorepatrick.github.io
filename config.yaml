@@ -1,0 +1,269 @@
+baseURL : "http://moorepatrick.com/"
+
+module:
+  imports:
+    path: github.com/HEIGE-PCloud/DoIt
+
+title : "Patrick Moore"
+
+# Language Settings
+languageCode : 'en-us'
+languageName : 'English'
+# whether to include Chinese/Japanese/Korean
+hasCJKLanguage : false
+
+# default amount of posts in each pages
+paginate : 12
+# copyright description used only for seo schema
+copyright : ""
+
+# whether to use robots.txt
+enableRobotsTXT : true
+# whether to use git commit log
+enableGitInfo : false
+# whether to use emoji code
+enableEmoji : true
+
+# ignore some build errors
+ignoreErrors : ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+# Author
+author:
+    name : "Patrick Moore"
+
+# Menu config
+menu:
+  main:
+    - name: About
+      weight : 1
+      identifier : "about"
+      url : "/about/"
+    - name : "Posts"
+      weight : 2
+      identifier : "posts"
+      url : "/posts/"
+    - name : "Tags"
+      weight : 3
+      identifier : "tags"
+      url : "/tags/"
+    - name : "Categories"
+      weight : 4
+      identifier : "categories"
+      url : "/categories/"
+
+# Markup related configuration in Hugo
+markup:
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  highlight:
+      # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+      noClasses: false
+
+# Permalinks
+permalinks:
+  posts: /posts/:year/:month/:title/
+
+params:
+  # site default theme ["auto", "light", "dark"]
+  defaultTheme : "light"
+  # public git repo url only then enableGitInfo is true
+  gitRepo : ""
+  # LoveIt NEW | 0.1.1 which hash function used for SRI, when empty, no SRI is used
+  # ["sha256", "sha384", "sha512", "md5"]
+  fingerprint : "sha512"
+  # LoveIt NEW | 0.2.0 date format
+  dateFormat : "2006-01-02"
+  # website title for Open Graph and Twitter Cards
+  title : "Patrick Moore"
+  # website description for RSS, SEO, Open Graph and Twitter Cards
+  description : "Patrick Moore"
+  # website images for Open Graph and Twitter Cards
+  # images : ["/logo.png"]
+
+  # Header config
+  header:
+    # desktop header mode ["fixed", "normal", "auto"]
+    desktopMode : "fixed"
+    # mobile header mode ["fixed", "normal", "auto"]
+    mobileMode : "auto"
+    # LoveIt NEW | 0.2.0 Header title config
+    title:
+      # URL of the LOGO
+      logo : ""
+      # title name
+      name : "Patrick Moore"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre : ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post : ""
+      # LoveIt NEW | 0.2.5 whether to use typeit animation for title name
+      typeit : false
+
+  # Footer config
+  footer:
+    enable : true
+    # LoveIt NEW | 0.2.0 Custom content (HTML format is supported)
+    custom : ''
+    # LoveIt NEW | 0.2.0 whether to show Hugo and theme info
+    hugo : true
+    # LoveIt NEW | 0.2.0 whether to show copyright info
+    copyright : true
+    # LoveIt NEW | 0.2.0 whether to show the author
+    author : true
+    # Site creation time
+    since : 2023
+    # license info (HTML format is supported)
+    license : '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # LoveIt NEW | 0.2.0 Section (all posts) page config
+  section:
+    # special amount of posts in each section page
+    paginate : 20
+    # date format (month and day)
+    dateFormat : "01-02-2006"
+    # amount of RSS pages
+    rss : 10
+
+  # LoveIt NEW | 0.2.0 List (category or tag) page config
+  list:
+    # special amount of posts in each list page
+    paginate : 20
+    # date format (month and day)
+    dateFormat : "01-02-2006"
+    # amount of RSS pages
+    rss : 10
+
+  # LoveIt NEW | 0.2.0 App icon config
+  app:
+    # optional site title override for the app when added to an iOS home screen or Android launcher
+    title : "Patrick Moore"
+    # whether to omit favicon resource links
+    noFavicon : false
+    # modern SVG favicon to use in place of older style .png and .ico files
+    svgFavicon : ""
+    # Android browser theme color
+    themeColor : "#ffffff"
+    # Safari mask icon color
+    iconColor : "#5bbad5"
+    # Windows v8-10 tile color
+    tileColor : "#da532c"
+
+  # LoveIt NEW | 0.2.0 Search config
+  search:
+    enable : true
+    # type of search engine ["lunr", "algolia"]
+    type : "lunr"
+    # max index length of the chunked content
+    contentLength : 4000
+    # placeholder of the search bar
+    placeholder : ""
+    # LoveIt NEW | 0.2.1 max number of results length
+    maxResultLength : 10
+    # LoveIt NEW | 0.2.3 snippet length of the result
+    snippetLength : 30
+    # LoveIt NEW | 0.2.1 HTML tag name of the highlight part in results
+    highlightTag : "em"
+    # LoveIt NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
+    absoluteURL : false
+
+  # Home page config
+  home:
+    # LoveIt NEW | 0.2.0 amount of RSS pages
+    rss : 10
+    # Home page profile
+    profile:
+      enable : true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail : ""
+      # URL of avatar shown in home page
+      avatarURL : "/images/avatar.jpg"
+      # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
+      title : ""
+      # subtitle shown in home page (HTML format is supported)
+      subtitle : ""
+      # whether to use typeit animation for subtitle
+      typeit : false
+      # whether to show social links
+      social : true
+      # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
+      disclaimer : ""
+    # Home page posts
+    posts:
+      enable : true
+      # special amount of posts in each home posts page
+      paginate : 6
+      # LoveIt DELETED | 0.2.0 replaced with hiddenFromHomePage in params.page
+      # default behavior when you don't set "hiddenFromHomePage" in front matter
+      defaultHiddenFromHomePage : false
+
+  # Social config about the author
+  social:
+    GitHub : "moorepatrick"
+    Linkedin : "thepatrickmoore"
+    # Twitter : "xxxx"
+    Keybase : "moorepatrick"
+    Strava : ""
+    Angellist : ""
+    Mastodon : "@moorepatrick@sfba.social"
+    # Kaggle : ""
+    # Phone : ""
+    # Email : "xxxx@xxxx.com"
+    RSS : true # LoveIt NEW | 0.2.0
+
+  # LoveIt CHANGED | 0.2.0 Page global config
+  page:
+    # LoveIt NEW | 0.2.0 whether to hide a page from home page
+    hiddenFromHomePage : false
+    # LoveIt NEW | 0.2.0 whether to hide a page from search results
+    hiddenFromSearch : false
+    # LoveIt NEW | 0.2.0 whether to enable twemoji
+    twemoji : false
+    # whether to enable lightgallery
+    lightgallery : false
+    # LoveIt NEW | 0.2.0 whether to enable the fraction extended syntax
+    fraction : true
+    # LoveIt NEW | 0.2.0 whether to enable the fontawesome extended syntax
+    fontawesome : true
+    # whether to show link to Raw Markdown content of the content
+    linkToMarkdown : true
+    # LoveIt NEW | 0.2.4 whether to show the full text content in RSS
+    rssFullText : true
+    # LoveIt NEW | 0.2.0 Table of the contents config
+    toc:
+      # whether to enable the table of the contents
+      enable : false
+      # LoveIt NEW | 0.2.9 whether to keep the static table of the contents in front of the post
+      keepStatic : true
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      auto : true
+    # LoveIt NEW | 0.2.0 Code config
+    code:
+      # whether to show the copy button of the code block
+      copy : true
+      # the maximum number of lines of displayed code by default
+      maxShownLines : 50
+    # LoveIt NEW | 0.2.0 Mapbox GL JS config
+    # mapbox:
+    #   # access token of Mapbox GL JS
+    #   accessToken : ""
+    #   # style for the light theme
+    #   lightStyle : "mapbox://styles/mapbox/light-v10?optimize=true"
+    #   # style for the dark theme
+    #   darkStyle : "mapbox://styles/mapbox/dark-v10?optimize=true"
+    #   # whether to add NavigationControl
+    #   navigation : true
+    #   # whether to add GeolocateControl
+    #   geolocate : true
+    #   # whether to add ScaleControl
+    #   scale : true
+    #   # whether to add FullscreenControl
+    #   fullscreen : true
+    # LoveIt CHANGED | 0.2.0 social share links in post page
+    share:
+      enable : false
+
+  # LoveIt NEW | 0.2.0 Analytics config
+  analytics:
+    enable : false
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]

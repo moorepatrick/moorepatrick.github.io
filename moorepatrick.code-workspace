@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"fullscreen",
+			"Kaggle",
+			"Keybase",
+			"Strava"
+		],
+		"cSpell.ignoreWords": [
+			"Angellist",
+			"Geolocate",
+			"Mapbox",
+			"accesstoken",
+			"fontawesome",
+			"getjson",
+			"lightgallery",
+			"nofollow",
+			"noopener",
+			"noreffer",
+			"thepatrickmoore",
+			"twemoji",
+			"typeit"
+		]
+	}
+}
