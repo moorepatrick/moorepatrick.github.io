@@ -1,4 +1,4 @@
-baseURL : "http://moorepatrick.com/"
+baseURL : "https://moorepatrick.com/"
 
 module:
   imports:
@@ -7,7 +7,7 @@ module:
 title : "Patrick Moore"
 
 # Language Settings
-languageCode : 'en-us'
+locale : 'en-us'
 languageName : 'English'
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage : false
@@ -26,10 +26,6 @@ enableEmoji : true
 
 # ignore some build errors
 ignoreErrors : ["error-remote-getjson", "error-missing-instagram-accesstoken"]
-
-# Author
-author:
-    name : "Patrick Moore"
 
 # Menu config
 menu:
@@ -63,6 +59,9 @@ permalinks:
   posts: /posts/:year/:month/:title/
 
 params:
+  # Author
+  author:
+    name : "Patrick Moore"
   # site default theme ["auto", "light", "dark"]
   defaultTheme : "light"
   # public git repo url only then enableGitInfo is true
@@ -81,10 +80,6 @@ params:
 
   # Header config
   header:
-    # desktop header mode ["fixed", "normal", "auto"]
-    desktopMode : "fixed"
-    # mobile header mode ["fixed", "normal", "auto"]
-    mobileMode : "auto"
     # LoveIt NEW | 0.2.0 Header title config
     title:
       # URL of the LOGO
@@ -150,8 +145,8 @@ params:
   # LoveIt NEW | 0.2.0 Search config
   search:
     enable : true
-    # type of search engine ["lunr", "algolia"]
-    type : "lunr"
+    # type of search engine ["fuse", "algolia", "pagefind"]
+    type : "fuse"
     # max index length of the chunked content
     contentLength : 4000
     # placeholder of the search bar
@@ -164,6 +159,17 @@ params:
     highlightTag : "em"
     # LoveIt NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
     absoluteURL : false
+    # Fuse.js search options
+    fuse:
+      isCaseSensitive : false
+      minMatchCharLength : 1
+      findAllMatches : false
+      location : 0
+      threshold : 0.3
+      distance : 100
+      ignoreLocation : true
+      useExtendedSearch : false
+      ignoreFieldNorm : false
 
   # Home page config
   home:
@@ -221,8 +227,6 @@ params:
     lightgallery : false
     # LoveIt NEW | 0.2.0 whether to enable the fraction extended syntax
     fraction : true
-    # LoveIt NEW | 0.2.0 whether to enable the fontawesome extended syntax
-    fontawesome : true
     # whether to show link to Raw Markdown content of the content
     linkToMarkdown : true
     # LoveIt NEW | 0.2.4 whether to show the full text content in RSS
